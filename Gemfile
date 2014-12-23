@@ -26,6 +26,9 @@ group :development do
   gem 'pry-rails'
 end
 
+gem 'unicorn'
+gem 'unicorn-rails'
+
 group :test do
   gem 'capybara'
   gem 'jasmine', "~> 2.0.0.rc4"
