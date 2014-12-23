@@ -11,7 +11,7 @@ Pokedex.Views.PokemonIndex = Backbone.View.extend({
 
   addPokemonToList: function (pokemon) {
     var content = JST["pokemonListItem"]({ pokemon: pokemon });
-    this.$el.append(content);
+    this.$el.prepend(content);
   },
 
   refreshPokemon: function (options, callback) {
