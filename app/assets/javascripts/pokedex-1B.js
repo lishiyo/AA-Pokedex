@@ -4,11 +4,11 @@ Pokedex.RootView.prototype.renderPokemonDetail = function (pokemon) {
   this.$pokeDetail.html(content);
 
   // Phase 2C.
-  this.$pokeDetail.append(
-    '<span style="font-weight: bold;">Toys:</span><br>'
-  );
-  var $toys = $('<ul class="toys"></ul>');
-  this.$pokeDetail.append($toys);
+  // this.$pokeDetail.append(
+  //   '<span style="font-weight: bold;">Toys:</span><br>'
+  // );
+  // var $toys = $('<ul class="toys"></ul>');
+  // this.$pokeDetail.append($toys);
 
   pokemon.fetch({
     success: (function() {
