@@ -29,6 +29,8 @@ Pokedex.Router = Backbone.Router.extend({
     $("#pokedex .pokemon-list").html(pokemonIndex.$el);
     // view automatically has this.collection == all our pokemon
     this._pokemonIndex = pokemonIndex;
+
+    this.pokemonForm();
   },
 
   toyDetail: function (pokemonId, toyId) {
@@ -44,6 +46,9 @@ Pokedex.Router = Backbone.Router.extend({
   },
 
   pokemonForm: function () {
+    var newPoke = new Pokedex.Models.Pokemon();
+    var pokemonForm = new Pokedex.Views.PokemonForm({ model: newPoke, collection: this._pokemonIndex.collection });
+    $('#pokedex .pokemon-form').html(pokemonForm.render().$el);
   }
 });
 
