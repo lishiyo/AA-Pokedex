@@ -1,0 +1,27 @@
+
+<script type="text/template" id="pokemon-detail-template">
+  <div class="detail">
+    <img src="<%%= pokemon.escape('image_url') %>"></img>
+
+    <dl>
+    <%% for (var attr in pokemon.attributes) { %>
+      <%%  if (pokemon.get(attr) && attr !== 'id' && attr !== 'image_url') { %>
+          <dt><%%= attr %>:</dt><dd><%%= pokemon.get(attr) %></dd>
+      <%%  } %>
+    <%%  } %>
+    </dl>
+  </div>
+</script>
+
+
+<script type="text/template" id="pokemon-list-item-template">
+</script>
+
+<script type="text/template" id="toy-list-item-template">
+</script>
+
+<script type="text/template" id="toy-detail-template">
+</script>
+
+<script type="text/template" id="pokemon-form-template">
+</script>
