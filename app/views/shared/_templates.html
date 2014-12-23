@@ -48,14 +48,16 @@
   </div>
 
   <select data-pokemon-id="<%%= toy.get('pokemon_id') %>" data-toy-id="<%%= toy.id %>" >
-    <%% pokes.each(function(pokemon) { %>
-      <option value="<%%= pokemon.id %>"
-        <%% if (pokemon.id === toy.get('pokemon_id')) { %>
-           selected 
-        <%% } %> >
-        <%%= pokemon.escape("name") %>
-      </option>
-    <%% }); %>
+    <%% if (pokes.length > 0) { %>
+      <%% pokes.each(function(pokemon) { %>
+        <option value="<%%= pokemon.id %>"
+          <%% if (pokemon.id === toy.get('pokemon_id')) { %>
+             selected
+          <%% } %> >
+          <%%= pokemon.escape("name") %>
+        </option>
+      <%% }); %>
+    <%% } %>
   </select>
 
 </script>
